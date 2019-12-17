@@ -1,0 +1,27 @@
+{
+  "name": "js-selenium-boilerplate",
+  "version": "1.0.0",
+  "description": "Example to start an automation project using javascript and selenium",
+  "main": "config.js",
+  "scripts": {
+    "test": "node node_modules/mocha/bin/mocha ./__tests__/**/*.ui.js --timeout=60000",
+    "test-watch": "node node_modules/mocha/bin/mocha ./__tests__/**/*.ui.js --watch --recursive --timeout=60000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jezfx/selenium-user-journey-example.git"
+  },
+  "author": "Fernando Zuniga fernando.zunigag@me.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jezfx/selenium-user-journey-example/issues"
+  },
+  "homepage": "https://github.com/Jezfx/selenium-user-journey-example#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-as-promised": "^7.1.1",
+    "dotenv": "^6.1.0",
+    "mocha": "^5.2.0",
+    "selenium-webdriver": "4.0.0-alpha.1"
+  }
+}
