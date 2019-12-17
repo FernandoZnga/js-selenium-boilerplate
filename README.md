@@ -12,6 +12,11 @@ To run locally using Chrome
 npm run test
 ```
 
+To run locally using Firefox
+```
+npm run test -- --firefox
+```
+
 To run it using browserstack
 ```
 npm run test -- --browserstack
