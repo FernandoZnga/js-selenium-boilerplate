@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Jezfx/selenium-user-journey-example.git"
+    "url": "git+https://github.com/FernandoZnga/js-selenium-boilerplate.git"
   },
   "author": "Fernando Zuniga fernando.zunigag@me.com",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Jezfx/selenium-user-journey-example/issues"
+    "url": "https://github.com/FernandoZnga/js-selenium-boilerplate/issues"
   },
-  "homepage": "https://github.com/Jezfx/selenium-user-journey-example#readme",
+  "homepage": "https://github.com/FernandoZnga/js-selenium-boilerplate/blob/master/README.md",
   "devDependencies": {
     "chai": "^4.2.0",
     "chai-as-promised": "^7.1.1",
