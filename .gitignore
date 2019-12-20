@@ -105,3 +105,6 @@ dist
 
 # Chromedriver must be downloadad from source
 chromedriver
+
+# Desktop Services Store (MacOS .DS_Store)
+.DS_Store
