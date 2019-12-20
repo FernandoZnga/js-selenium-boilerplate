@@ -7,7 +7,9 @@ npm install
 ```
 
 Download chromedriver and put the file in the source directory
-https://chromedriver.chromium.org/downloads
+
+[Download from here](https://chromedriver.chromium.org/downloads)
+
 Select the right version according your Google Chrome version
 
 To run locally using Chrome
