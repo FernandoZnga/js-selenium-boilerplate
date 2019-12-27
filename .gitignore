@@ -106,5 +106,8 @@ dist
 # Chromedriver must be downloadad from source
 chromedriver
 
+# Firefox geckodriver must be downloaded from source
+geckodriver
+
 # Desktop Services Store (MacOS .DS_Store)
 .DS_Store

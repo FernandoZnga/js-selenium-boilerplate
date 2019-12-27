@@ -15,9 +15,7 @@ describe("Home Page", () => {
 
   beforeEach(async () => {
     driver = await driverSetup.build();
-
     home = new Home(driver);
-
     await home.open();
   });
 
@@ -30,8 +28,10 @@ describe("Home Page", () => {
       const header = await utils.waitFind(driver, home.locators.header);
       expect(header).to.be.a("object");
     });
+  });
 
-    it("should be able to log in", async () => {
+  describe("Perform login", () => {
+    it("successful login", async () => {
       const header = await utils.waitFind(driver, home.locators.header);
       expect(header).to.be.a("object");
 
@@ -39,8 +39,8 @@ describe("Home Page", () => {
       await home.enterPassword();
       await home.clickLogin();
 
-      // const loggedInText = await utils.waitFind(driver, home.locators.accountInformation);
-      // expect(loggedInText).to.be.a("object");
+      const loggedInText = await utils.waitFind(driver, home.locators.accountInformation);
+      expect(loggedInText).to.be.a("object");
     });
-  });
+  })
 });

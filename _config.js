@@ -2,11 +2,14 @@ const selenium = require("selenium-webdriver");
 require("dotenv").config();
 
 var capabilities = {
-  browserName: "Chrome",
-  browser_version: '79.0',
-  os: "OS X",
-  os_version: "Mojave",
-  "browserstack.local" : 'false',
+  'os' : 'OS X',
+  'os_version' : 'Catalina',
+  'browserName' : 'Chrome',
+  'browser_version' : '79.0',
+  'project' : 'Boilerplate automation',
+  'build' : 'Build-1',
+  'name' : 'js-selenium-boilerplate',
+  'browserstack.local' : 'false',
   'browserstack.selenium_version' : '3.6.0',
   "browserstack.user": process.env.BROWSERSTACK_USERNAME,
   "browserstack.key": process.env.BROWSERSTACK_AUTOMATE_KEY
@@ -14,20 +17,22 @@ var capabilities = {
 
 const browsers = {
   browserstack: new selenium.Builder()
-    .usingServer("http://hub-cloud.browserstack.com/wd/hub")
-    .withCapabilities(capabilities),
-  chrome: new selenium.Builder().withCapabilities(
-    selenium.Capabilities.chrome()
+  .usingServer("http://hub-cloud.browserstack.com/wd/hub")
+  .withCapabilities(capabilities),
+  
+  chrome: new selenium.Builder()
+  .withCapabilities(selenium.Capabilities.chrome()
   ),
-  firefox: new selenium.Builder().withCapabilities(
-    selenium.Capabilities.firefox()
+
+  firefox: new selenium.Builder()
+  .withCapabilities(selenium.Capabilities.firefox()
   )
 };
 
 const getBrowserFlag = process =>
   process.argv.find(arg =>
     Object.keys(browsers).find(key => arg.includes(key))
-  );
+);
 
 exports.browser = process =>
   getBrowserFlag(process)

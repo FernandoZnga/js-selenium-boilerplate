@@ -6,9 +6,13 @@
 npm install
 ```
 
-Download chromedriver and put the file in the source directory
-https://chromedriver.chromium.org/downloads
-Select the right version according your Google Chrome version
+Download chromedriver for Chrome and put the file in the source directory
+[chromedriver download here](https://chromedriver.chromium.org/downloads)
+Select the right version according your Google Chrome version.
+
+Download geckodriver for Firefox and put the file in the source directory
+[geckodriver download here](https://github.com/mozilla/geckodriver/releases)
+Select the right version according your SO.
 
 To run locally using Chrome
 ```
