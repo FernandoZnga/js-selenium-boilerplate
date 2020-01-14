@@ -104,10 +104,10 @@ dist
 .tern-port
 
 # Chromedriver must be downloadad from source
-chromedriver
+# chromedriver
 
 # Firefox geckodriver must be downloaded from source
-geckodriver
+# geckodriver
 
 # Desktop Services Store (MacOS .DS_Store)
 .DS_Store
