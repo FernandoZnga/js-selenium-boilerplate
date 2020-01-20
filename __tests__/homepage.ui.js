@@ -53,9 +53,9 @@ describe("Home Page", () => {
     });
     it("should perform a successful login", async () => {
       // TODO add some actions for login - issue that Auth0 don't allow actions on username and password
-      // const authUsername = await utils.waitFind(driver, home.locators.authUsername);
-      // expect(authUsername).to.be.a("object");
-      // await home.setUsername()
+      const authUsername = await utils.waitFind(driver, home.locators.authUsername);
+      expect(authUsername).to.be.a("object");
+      await home.setUsername()
     })
   });
 
