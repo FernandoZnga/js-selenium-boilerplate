@@ -5,12 +5,12 @@ var capabilities = {
   'os' : 'OS X',
   'os_version' : 'Catalina',
   'browserName' : 'Chrome',
-  'browser_version' : '79.0',
+  'browser_version' : '74.0',
   'project' : 'Boilerplate automation',
   'build' : 'Build-1',
   'name' : 'js-selenium-boilerplate',
   'browserstack.local' : 'false',
-  'browserstack.selenium_version' : '3.6.0',
+  'browserstack.selenium_version' : '4.0.0-alpha.1',
   "browserstack.user": process.env.BROWSERSTACK_USERNAME,
   "browserstack.key": process.env.BROWSERSTACK_AUTOMATE_KEY
 };

@@ -23,24 +23,24 @@ describe("Home Page", () => {
     driver.quit();
   });
 
-  describe("Header", () => {
+  describe("Foot Note", () => {
     it("should exist", async () => {
-      const header = await utils.waitFind(driver, home.locators.header);
-      expect(header).to.be.a("object");
+      const footNote = await utils.waitFind(driver, home.locators.footNote);
+      expect(footNote).to.be.a("object");
     });
   });
 
   describe("Perform login", () => {
     it("successful login", async () => {
-      const header = await utils.waitFind(driver, home.locators.header);
-      expect(header).to.be.a("object");
+      const footNote = await utils.waitFind(driver, home.locators.footNote);
+      expect(footNote).to.be.a("object");
 
       await home.enterUsername();
       await home.enterPassword();
       await home.clickLogin();
 
-      const loggedInText = await utils.waitFind(driver, home.locators.accountInformation);
-      expect(loggedInText).to.be.a("object");
+      const userPicture = await utils.waitFind(driver, home.locators.userPicture);
+      expect(userPicture).to.be.a("object");
     });
   })
 });

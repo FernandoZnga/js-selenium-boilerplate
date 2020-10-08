@@ -1,20 +1,20 @@
 const { By } = require("selenium-webdriver");
 
-const url = "https://commerceos.staging.devpayever.com/";
+const url = "https://www.trunk.fortress.elmington.io/";
 
 class HomePage {
 
   constructor(driver) {
     this.driver = driver;
     this.locators = {
-      username: By.xpath('//*[@id="os-app-main"]/entry-layout-wrapper/entry-layout/div[2]/pe-info-box/div/mat-card/mat-card-content/div/div/login-layout/entry-login/div/form/pe-form-login-fieldset/div/div/div[1]/pe-input/div/mat-form-field'),
-      usernameTextField: By.xpath('//*[@id="mat-input-2"]'),
-      password: By.xpath('//*[@id="os-app-main"]/entry-layout-wrapper/entry-layout/div[2]/pe-info-box/div/mat-card/mat-card-content/div/div/login-layout/entry-login/div/form/pe-form-login-fieldset/div/div/div[2]/pe-input-password'),
-      passwordTextField: By.xpath('//*[@id="mat-input-3"]'),
-      loginButton: By.css('os-commerce#os-app-main pe-progress-button-content > div'),
-      header: By.css("os-commerce#os-app-main img"),
+      username: By.name('username'),
+      usernameTextField: By.name('username'),
+      password: By.name('password'),
+      passwordTextField: By.name('password'),
+      loginButton: By.xpath('/html/body/div/div/div/div[1]/div/div/div/form/button'),
+      footNote: By.name('username'),
       // buttonLogin: By.css("#gb_70"),
-      accountInformation: By.css("os-commerce#os-app-main div.profile-header")
+      userPicture: By.className('user-picture')
     }
   }
 
@@ -27,11 +27,11 @@ class HomePage {
   }
   async enterUsername() {
     await this.driver.findElement(this.locators.username).click();
-    await this.driver.findElement(this.locators.usernameTextField).sendKeys('aqa@payever.org');
+    await this.driver.findElement(this.locators.usernameTextField).sendKeys('Fernando');
   }
   async enterPassword() {
     await this.driver.findElement(this.locators.password).click();
-    await this.driver.findElement(this.locators.passwordTextField).sendKeys('Aqacool123!');
+    await this.driver.findElement(this.locators.passwordTextField).sendKeys('Password1234!');
   }
 }
 
