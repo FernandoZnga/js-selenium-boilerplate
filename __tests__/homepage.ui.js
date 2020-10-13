@@ -23,7 +23,7 @@ describe("Home Page", () => {
     driver.quit();
   });
 
-  describe("Foot Note", () => {
+  describe("Username text label", () => {
     it("should exist", async () => {
       const footNote = await utils.waitFind(driver, home.locators.footNote);
       expect(footNote).to.be.a("object");
