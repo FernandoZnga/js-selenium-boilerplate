@@ -13,13 +13,14 @@ const driverSetup = config.browser(process);
 describe("Home Page", () => {
   let driver;
 
-  beforeEach(async () => {
+  before(async () => {
     driver = await driverSetup.build();
     home = new Home(driver);
+    driver.manage().window().maximize();
     await home.open();
   });
 
-  afterEach(async () => {
+  after(async () => {
     driver.quit();
   });
 

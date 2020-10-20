@@ -2,15 +2,17 @@ const selenium = require("selenium-webdriver");
 require("dotenv").config();
 
 var capabilities = {
-  'os' : 'OS X',
-  'os_version' : 'Catalina',
-  'browserName' : 'Chrome',
-  'browser_version' : '79.0',
-  'project' : 'Boilerplate automation',
-  'build' : 'Build-2',
-  'name' : 'js-selenium-boilerplate',
-  'browserstack.local' : 'false',
+  'os' : process.env.BROWSERSTACK_OS,
+  'os_version' : process.env.BROWSERSTACK_OS_VERSION,
+  'browserName' : process.env.BROWSERSTACK_BROWSERNAME,
+  'browser_version' : process.env.BROWSERSTACK_BROWSER_VERSION,
+  'project' : process.env.BROWSERSTACK_PROJECT,
+  'build' : process.env.BROWSERSTACK_BUILD,
+  'name' : process.env.BROWSERSTACK_NAME,
+  'browserstack.local' : process.env.BROWSERSTACK_LOCAL,
   'browserstack.selenium_version' : '3.6.0',
+  'resolution' : "1920x1080",
+  'browserstack.networkLogs' : true,
   "browserstack.user": process.env.BROWSERSTACK_USERNAME,
   "browserstack.key": process.env.BROWSERSTACK_AUTOMATE_KEY
 };
